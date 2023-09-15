@@ -1,13 +1,13 @@
 // ================== NAVBAR =================
 const navBar=document.querySelector('nav');
-// window.addEventListener('scroll', ()=>{
-//     navBar.classList.toggle('nav_scroll', window.scrollY>100 )
-//     if(navBar.classList.contains('nav_scroll')){
-//         navBar.querySelector('.logo').src='./Images/logo-black.png'
-//     }else{
-//         navBar.querySelector('.logo').src='./Images/logo-white.png'
-//     }
-// })
+window.addEventListener('scroll', ()=>{
+    navBar.classList.toggle('nav_scroll', window.scrollY>100 )
+    if(navBar.classList.contains('nav_scroll')){
+        navBar.querySelector('.logo').src='./Images/logo-black.png'
+    }else{
+        navBar.querySelector('.logo').src='./Images/logo-white.png'
+    }
+})
 
 // ==================END OF NAVBAR=================
 
