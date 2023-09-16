@@ -13,29 +13,37 @@ window.addEventListener('scroll', ()=>{
 
 
 // ==================HEADER =================
-const videoContainer=document.querySelector('.hero_bottom-videos');
+const videoContainer=document.querySelectorAll('.hero_bottom-videos');
 let slide= 0;
 
 
 setInterval(()=>{
-    slide+=10.028;
-    if(slide>50.14){
-        slide=0;
-        videoContainer.style.transition='none';
-        videoContainer.style.transform=`translateX(${0}%)`
-        setTimeout(()=>{
-            slide=10.028;
-            // slide=0;
-        videoContainer.style.transition= 'all .45s ease';
-        videoContainer.style.transform=`translateX(-${slide}%)`
-        },10)
-    }else{
-        videoContainer.style.transform=`translateX(-${slide}%)`
-        videoContainer.style.transition= 'all .45s ease';
-    }
-    
-},2900)
+    slide+=20.02;
 
+    if(slide>100.1){
+        slide=20.02;
+        videoContainer[0].style.transition='none'
+        videoContainer[1].style.transition='none'
+    }
+    // if(slide>50.14){
+    //     slide=0;
+    //     videoContainer.style.transition='none';
+    //     videoContainer.style.transform=`translateX(${0}%)`
+    //     setTimeout(()=>{
+    //         slide=10.028;
+    //         // slide=0;
+    //     videoContainer.style.transition= 'all .45s ease';
+    //     videoContainer.style.transform=`translateX(-${slide}%)`
+    //     },10)
+    // }else{
+    //     videoContainer.style.transform=`translateX(-${slide}%)`
+    // }
+    videoContainer.forEach(video=>{
+        video.style.transform=`translateX(-${slide}%)`
+        video.style.transition= 'all .45s ease';
+    })
+    
+},20000)
 
 
 // ==================Services Section=================
