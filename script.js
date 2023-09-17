@@ -18,17 +18,18 @@ let slide= 0;
 
 
 setInterval(()=>{
-    slide+=10.028;
+    // slide+=10.028;
+    slide+=6.2675;
     if(slide>50.14){
         slide=0;
         videoContainer.style.transition='none';
         videoContainer.style.transform=`translateX(${0}%)`
-        setTimeout(()=>{
-            slide=10.028;
-            // slide=0;
-        videoContainer.style.transition= 'all .45s ease';
-        videoContainer.style.transform=`translateX(-${slide}%)`
-        },10)
+        // setTimeout(()=>{
+        //     slide=10.028;
+        //     // slide=0;
+        // videoContainer.style.transition= 'all .45s ease';
+        // videoContainer.style.transform=`translateX(-${slide}%)`
+        // },10)
     }else{
         videoContainer.style.transform=`translateX(-${slide}%)`
         videoContainer.style.transition= 'all .45s ease';

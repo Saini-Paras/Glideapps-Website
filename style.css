@@ -473,6 +473,7 @@ line-height: 1.6rem;
 .services_brands .brands{
     display: flex;
     align-items: center;
+    /* flex-wrap: wrap; */
     gap: 3rem;
 }
 
