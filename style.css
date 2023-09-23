@@ -743,7 +743,8 @@ nav.nav_scroll .nav_list > li:hover {
   border-radius: 50%;
   position: fixed;
   top: 0rem;
-  transform: translate(-2%, -2%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   z-index: 10;
   background-color: #000;
   display: none;
