@@ -21,7 +21,7 @@ let slide = 0;
 
 setInterval(() => {
   // slide+=10.028;
-  slide += 6.2675;
+  slide += 10.028;
   if (slide > 50.14) {
     slide = 0;
     videoContainer.style.transition = "none";
@@ -37,6 +37,34 @@ setInterval(() => {
     videoContainer.style.transition = "all .45s ease";
   }
 }, 2900);
+setInterval(()=>{
+    slide+=20.02;
+
+    if(slide>100.1){
+        slide=20.02;
+        videoContainer[0].style.transition='none'
+        videoContainer[1].style.transition='none'
+    }
+    // if(slide>50.14){
+    //     slide=0;
+    //     videoContainer.style.transition='none';
+    //     videoContainer.style.transform=`translateX(${0}%)`
+    //     setTimeout(()=>{
+    //         slide=10.028;
+    //         // slide=0;
+    //     videoContainer.style.transition= 'all .45s ease';
+    //     videoContainer.style.transform=`translateX(-${slide}%)`
+    //     },10)
+    // }else{
+    //     videoContainer.style.transform=`translateX(-${slide}%)`
+    // }
+    videoContainer.forEach(video=>{
+        video.style.transform=`translateX(-${slide}%)`
+        video.style.transition= 'all .45s ease';
+    })
+    
+},20000)
+
 
 // ==================Services Section=================
 
@@ -118,11 +146,9 @@ showreelLeft.addEventListener("mouseleave", function () {
 });
 showreelMenu.addEventListener("mouseenter", function () {
   mouse.style.display = "none";
-  console.log('ge');
 });
 showreelMenu.addEventListener("mouseleave", function () {
   mouse.style.display = "block";
-  console.log('gee');
 
 });
 // ==================END OF Services Section=================

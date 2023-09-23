@@ -484,8 +484,7 @@ nav.nav_scroll .nav_list>li:hover{
     gap: 3.2rem;
     display: none;
 }
-.toggle_links-content-1{
-}
+
 .toggle_links-content-2 {
     display: none;
 }
@@ -572,7 +571,13 @@ line-height: 1.6rem;
     gap: 1rem;
     white-space: nowrap;
     transition: all .45s ease;
-    
+    /* border: 2px solid blue; */
+    /* animation: videoAnimation 120s linear infinite ; */
+    padding: 0 0rem 0 0.5rem ;
+    /* transform: translateX(-100%); */
+}
+.hero_bottom-videos:hover{
+    animation-play-state: paused;
 }
 .hero_bottom-video{
     height: 352px;
@@ -580,6 +585,7 @@ line-height: 1.6rem;
     border-radius: 25px;
     cursor: pointer;
     position: relative;
+    /* border: 2px solid green; */
 }
 .hero_bottom-video-1,.hero_bottom-video-3,.hero_bottom-video-6{
     width: 560px;
@@ -606,6 +612,16 @@ line-height: 1.6rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+@keyframes videoAnimation {
+    from{
+        transform: translateX(0%);
+    }   
+    to{
+        transform: translateX(-100%);
+    }
 }
 /* --------------------END OF HEADER------------------- */
 
@@ -677,7 +693,7 @@ line-height: 1.6rem;
 }
 
 .services_video-showreel .menubar_container{
-width: 65%;
+    width: 65%;
     z-index: 5;
     position: absolute;
     top: 1rem;
@@ -925,9 +941,7 @@ background-color: var(--clr-white);
 .building_2-head .box.active .box-overlay{
     animation: boxOverlayAnimation 6.75s ease-out ;
 }
-.building_2-head .box:hover .box-overlay{
-    /* animation-play-state: paused; */
-}
+
 @keyframes boxOverlayAnimation {
     0%{
         transform:translateX(-100%) ;
@@ -1646,6 +1660,7 @@ background-color: var(--clr-white);
     overflow: hidden;
     transition: all .5s ease;
     
+
     border: 3.5px solid transparent;
     position: relative;
 }
