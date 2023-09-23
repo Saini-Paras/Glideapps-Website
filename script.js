@@ -16,20 +16,25 @@ window.addEventListener("scroll", () => {
 // ==================END OF NAVBAR=================
 
 // ==================HEADER =================
-const videoContainer = document.querySelector(".hero_bottom-videos");
+const videoContainer = document.querySelectorAll(".hero_bottom-videos");
 let slide = 0;
 
 setInterval(() => {
-  slide += 10.028;
-  if (slide > 50.14) {
+  slide += 16.69083;
+  if (slide > 100.145) {
     slide = 0;
-    videoContainer.style.transition = "none";
-    videoContainer.style.transform = `translateX(${0}%)`;
+    videoContainer.forEach(video=>{
+      video.style.transition = "none";
+      video.style.transform = `translateX(${0}%)`;
+    })
   } else {
-    videoContainer.style.transform = `translateX(-${slide}%)`;
-    videoContainer.style.transition = "all .45s ease";
+    videoContainer.forEach(video=>{
+      video.style.transform = `translateX(-${slide}%)`;
+      video.style.transition = "all .45s ease";
+    })
   }
-}, 2900);
+}, 3200);
+
 
 // ==================Services Section=================
 
