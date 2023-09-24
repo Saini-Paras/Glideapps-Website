@@ -2,7 +2,15 @@
 const openBtn = document.querySelector(".open-btn");
 
 const navBar = document.querySelector("nav");
-window.addEventListener("scroll", () => {
+let coords=0;
+const serviceVideoShowreel=document.querySelector('.services_video-showreel')
+
+window.addEventListener("scroll", (e) => {
+  if(serviceVideoShowreel.getBoundingClientRect().top<=220 && serviceVideoShowreel.getBoundingClientRect().top>-500){
+  }else{
+    mouse.style.display='none'
+  }
+
   navBar.classList.toggle("nav_scroll", window.scrollY > 100);
   if (navBar.classList.contains("nav_scroll")) {
     navBar.querySelector(".logo").src = "./Images/logo-black.png";
@@ -12,7 +20,6 @@ window.addEventListener("scroll", () => {
     openBtn.style.color='#fff'
   }
 });
-
 // ==================END OF NAVBAR=================
 
 // ==================HEADER =================
@@ -37,7 +44,6 @@ setInterval(() => {
 
 
 // ==================Services Section=================
-
 function showReel(elem) {
   if (elem.classList.contains("active")) {
     return;
@@ -119,7 +125,6 @@ showreelMenu.addEventListener("mouseenter", function () {
 });
 showreelMenu.addEventListener("mouseleave", function () {
   mouse.style.display = "block";
-
 });
 // ==================END OF Services Section=================
 
@@ -201,7 +206,6 @@ const boxDuration2 = [6.7, 9.1, 7.2, 4];
 // })
 
 buildingVideo.currentTime = 20;
-console.log(buildingVideo.currentTime);
 // ==================END OF BUILDING Section=================
 
 // ==================TESTIMONIAL SECTION=================
