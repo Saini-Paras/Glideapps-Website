@@ -5,6 +5,15 @@ const navBar = document.querySelector("nav");
 let coords=0;
 const serviceVideoShowreel=document.querySelector('.services_video-showreel')
 
+window.addEventListener('load',()=>{
+  document.querySelector('.preloader').style.transform='translateY(-100%)'
+  setTimeout(()=>{
+    document.querySelector('.preloader').style.display='none'
+  },1500)
+  console.log('loaded');
+})
+
+
 window.addEventListener("scroll", (e) => {
   if(serviceVideoShowreel.getBoundingClientRect().top<=220 && serviceVideoShowreel.getBoundingClientRect().top>-500){
   }else{
