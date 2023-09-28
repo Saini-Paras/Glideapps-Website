@@ -248,16 +248,6 @@ ctaContainer.addEventListener("mouseleave", () => {
 });
 // ==================END OF TESTIMONIAL SECTION=================
 
-gsap.from(".building_3-top h1", {
-  opacity: 0,
-  x: -50,
-  duration: 1.5,
-  scrollTrigger: {
-    trigger: ".building_3",
-    scroller: "body",
-    start: "top 50%",
-  },
-});
 
 // RESPONSIVE
 // menu

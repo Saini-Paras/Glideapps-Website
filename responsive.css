@@ -379,6 +379,15 @@
   .building_4-box:nth-child(3) .box_media img {
     transform: translateY(0rem) scale(1);
   }
+  .cta_scroller{
+    width: 29rem;
+  }
+  .cta_container .head{
+    padding: 2.2rem 2.5rem;
+  }
+  .cta_container h1{
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 670px) {
