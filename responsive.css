@@ -347,7 +347,6 @@
   .services_video-showreel .menubar {
     border-radius: 0px;
     background: transparent;
-    backdrop-filter: none;
   }
   .services_video-showreel .menubar li {
     padding: 0.25rem;
